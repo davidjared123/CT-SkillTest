@@ -1,0 +1,402 @@
+:root{
+    --blue: #414f6b;
+    --gray: #a0a7b5;
+    --dark-blue: #424242;
+    --white: #ffff;
+    --light-blue: #63769d;
+}
+
+
+@font-face{
+    font-family: oswald;
+    src: url(../fuentes/Oswald-Bold.ttf);
+}
+
+@font-face{
+    font-family: bebas;
+    src: url(../fuentes/BebasNeue-Regular.ttf);
+}
+
+/* CLASES GENERALES */
+body{   
+    margin: 0;
+    color: var(--dark-blue);
+    font-family: bebas, oswald;
+}
+
+.wrapper{
+    padding: 0 10%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+nav a{
+    text-decoration: none;
+    
+}
+
+nav p{
+    margin: 0;
+    padding: 0;
+    color: var(--dark-blue);
+    border-bottom: 1px solid var(--dark-blue);
+    padding-right: 5px ;
+}
+.navbar-main p{
+    color: var(--white);
+    border-color: var(--white);
+}
+
+.navbar-main .nav-menu{
+    display: none;
+}
+
+.title h2{
+    color: #71809a;
+    font-size: 7.25em;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.title h3{
+    font-size: 1.2em;
+    color: var(--blue);
+    padding: 0;
+    margin-top: -4.25em;
+    margin-left: 5em;
+}
+
+.description{
+    margin-top: -1em;
+    font-size: .6em;
+    font-family: oswald;
+}
+
+.history .description{
+    /* padding: 0 6em; */
+    font-size: .5em;
+    margin-top: .25em;
+}
+
+.climb-grid{
+    grid-gap: 2.25em;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 25% 75%;
+}
+.climb .description{
+   margin-top: 4.5em;
+   padding: 0 1em 0 3.5em;
+   font-size: .5em;
+}
+
+
+    /* SECTION MAIN  */
+.main{
+    background-image: url('../img/img0-movil.jpg');
+    background-repeat: no-repeat;
+    background-position-x: 46%;
+    background-position-y: 30%;
+    margin-top: -80px;
+    height: 98vh;
+}
+
+.navbar-secundary img{
+    width: 120px;
+}
+
+    /* SECTION HISTORY */
+.history{
+    background-image: url('../img/img2.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+/* HISTORY - CAROUSEL  */
+.history-carousel{
+    bottom: 0px;
+    height: 120px;
+    background-color: #414f6b8f;
+    margin-top: -120px;
+ }
+
+ .c-images1{
+     display: grid;
+     /* grid-template-columns: auto auto auto auto; */
+     height: 120px;
+     /* background-color: red; */
+     width: 100%;
+    grid-gap: .8em;
+     justify-content: center;
+     align-items: center;
+     /* background-color: red; */
+ }
+ .center{
+     overflow: hidden;
+     width: 90vw;
+ }
+
+  .center > .inner {
+    display: flex;
+    grid-gap: 1em;
+    transition: all 1s ease-in-out;
+  }
+  
+  .card {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  }
+  .card > img {
+    /* display: block; */
+    width: 100px;
+  }
+
+  .map {
+    margin-top: -.2em;
+    width: 100%;
+    text-align: center;
+  }
+  .map > button {
+    all: unset;
+    background: var(--blue);
+    cursor: pointer;
+    margin: 0 0.125em;
+    position: relative;
+    user-select: none;
+    border-radius: 100%;
+    height: .5em;
+    width: .5em;
+    top: 0;
+  }
+  .map > button.active:after {
+    background: var(--white);
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 0%;
+    border-radius: 100%;
+    height: 0.5em;
+    width: 0.5em;
+  }
+  
+  .map > button.active {
+    background-color: transparent;
+  }
+
+
+    /* SECTION CLIMB  */
+.climb-title{
+    height: 135px;
+}
+
+.climb-navbar{
+    background-color: var(--blue);
+    display: flex;
+    align-items: center;
+}
+.climb-navbar a{
+    text-decoration: none;
+    color: var(--gray);
+}
+
+.active{
+    background-color: var(--gray);
+}
+.active a{
+    color: var(--blue);
+    border-bottom: 1px solid var(--blue);
+}
+
+.climb-navbar p{
+    margin: 0;
+    margin-right: .4em;
+    padding: .4em 1em;
+    font-size: bold;
+    display: inline-flex;
+    /* background-color: red; */
+}
+
+.climb-img{
+    background-image: url('../img/img3.jpg');
+    height: 405px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+
+
+.wrapper-climb{
+    padding: 3em 3em;
+}
+.climb-card{
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.568);
+    width: 12em;
+}
+
+.climb-card h3{
+    color: var(--blue);
+    font-size: 2em;
+    margin: 0;
+}
+.card-items{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-items p{
+    font-size: .75em;
+    font-family: oswald;
+    font-weight: 300;
+    margin: 0;
+}
+
+
+    /* SECOND NAV  */
+.nav2-menu p{
+    display: inline-block;
+    border-bottom: 1px solid var(--dark-blue);
+    padding-right: 5px ;
+}
+
+    /* FOOTER  */
+.footer{
+    background-color:#414f6b;
+}
+.footer img{
+    width: 120px;
+}
+
+.copyright p{
+    font-size: .5em;
+    border: none;
+    color: var(--light-blue);
+}
+
+@media (min-width: 980px){
+
+    
+.main{
+    background-image: url('../img/img0.jpg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    margin-top: -80px;
+    min-height: 80vh;
+    height: 825px;
+}
+
+
+    nav p{
+        display: inline-block;
+        margin-left: 2.5em;
+    }
+
+    .navbar-secundary img{
+        width: 165px;
+    }
+    .footer img{
+        width: 165px;
+    }
+    .hamburguer{
+        display: none;
+    }
+
+    .navbar-main .nav-menu{
+        display: inline-block;
+    }
+
+    .history-carousel{
+        bottom: 0px;
+        height: 195px;
+        background-color: #414f6b8f;
+        margin-top: -195px;
+     }
+    
+     .c-images1{
+         display: grid;
+         /* grid-template-columns: auto auto auto auto; */
+         height: 195px;
+         /* background-color: red; */
+         width: 100%;
+        grid-gap: .8em;
+         justify-content: center;
+         align-items: center;
+         /* background-color: red; */
+     }
+
+    .center{
+        overflow: hidden;
+        width: 60em;
+    }
+    .card > img {
+        /* display: block; */
+        width: 215px;
+      }
+
+
+      .copyright p{
+        font-size: .8em;
+        border: none;
+        color: var(--light-blue);
+    }
+
+    .wrapper-climb{
+    padding: 5em 10em;
+}
+.climb-card{
+    width: 15em;
+}
+    
+.title h2{
+    font-size: 10em;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.title h3{
+    font-size: 2.2em;
+    padding: 0;
+    margin-top: -3.25em;
+    margin-left: 3.75em;
+} 
+
+.description{
+    margin-top: -1em;
+    font-size: .68em;
+}
+
+.history .description{
+    padding: 0 6em;
+}
+
+.climb .description{
+   margin-top: .5em;
+   padding: 0 3em;
+}
+
+.climb-grid{
+    padding: 0 3em;
+    grid-gap: 4em;
+}
+
+.climb-img{
+    background-image: url('../img/img3.jpg');
+    height: 545px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.climb-title{
+    height: 195px;
+}
+    
+}
+
