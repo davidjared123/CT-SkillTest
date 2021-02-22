@@ -10,7 +10,28 @@
 @font-face{
     font-family: oswald;
     src: url(../fuentes/Oswald-Bold.ttf);
+    font-weight: 700;
 }
+
+@font-face{
+    font-family: oswald;
+    src: url(../fuentes/Oswald-Regular.ttf);
+    font-weight: 600;
+}
+
+
+@font-face{
+    font-family: oswald;
+    src: url(../fuentes/Oswald-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face{
+    font-family: oswald;
+    src: url(../fuentes/Oswald-Light.ttf);
+    font-weight: 300;
+}
+
 
 @font-face{
     font-family: bebas;
@@ -26,6 +47,10 @@ body{
 
 .wrapper{
     padding: 0 10%;
+}
+
+#menu{
+    display: none;
 }
 
 nav{
@@ -47,12 +72,22 @@ nav p{
     padding-right: 5px ;
 }
 .navbar-main p{
-    color: var(--white);
-    border-color: var(--white);
+    color: var(--blue);
+    border-color: var(--blue);
+    transition: all 400ms;
 }
 
 .navbar-main .nav-menu{
+    background-color: rgba(255, 255, 255, 0.555);
+    position: absolute;
     display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    left: 0;
+    padding: 2em 0;
+    width: 100%;
+    top: 4em;
 }
 
 .title h2{
@@ -75,6 +110,7 @@ nav p{
     margin-top: -1em;
     font-size: .6em;
     font-family: oswald;
+    font-weight: 500;
 }
 
 .history .description{
@@ -263,6 +299,10 @@ nav p{
     display: inline-block;
     border-bottom: 1px solid var(--dark-blue);
     padding-right: 5px ;
+    font-weight: 300;
+    font-size: .85em;
+    font-style: italic;
+    font-family: bebas;
 }
 
     /* FOOTER  */
@@ -280,8 +320,38 @@ nav p{
 }
 
 @media (min-width: 980px){
-
+    .wrapper{
+        padding: 0 20%;
+    }
     
+
+    .navbar-main p{
+        color: var(--white);
+        border-color: var(--white);
+        padding: 0;
+        
+    }
+
+    .navbar-main .nav-menu{
+        background-color: transparent;
+        /* background-color: blue; */
+        position: initial;
+        /* background-color: red; */
+        display: grid;
+        align-items: center !important;
+        right: 0;
+        justify-self: flex-end;
+        justify-content: flex-end;
+        justify-items: end;
+        padding: 0em 0;
+        margin: 0;
+        width: auto;
+        /* height: 10em; */
+        top: 0em;
+        
+        /* display: none; */
+    }
+
 .main{
     background-image: url('../img/img0.jpg');
     background-repeat: no-repeat;
@@ -294,6 +364,10 @@ nav p{
 
     nav p{
         display: inline-block;
+        font-family: bebas;
+        font-weight: 300;
+        font-size: .85em;
+        font-style: italic;
         margin-left: 2.5em;
     }
 
@@ -369,16 +443,20 @@ nav p{
 
 .description{
     margin-top: -1em;
-    font-size: .68em;
+    font-size: .8em;
 }
 
 .history .description{
     padding: 0 6em;
+    font-size: .8em;
+    font-weight: 300;
 }
 
 .climb .description{
    margin-top: .5em;
    padding: 0 3em;
+   font-size: .8em;
+   font-weight: 300;
 }
 
 .climb-grid{

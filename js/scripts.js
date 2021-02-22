@@ -19,3 +19,18 @@ buttonsWrapper.addEventListener("click", e => {
     }
   }
 });
+
+
+
+const menu = document.querySelector("#menu");
+
+
+const clickMenu = () =>{
+  if(menu.checked){
+    const container = document.querySelector('.nav-menu');
+    container.style.display = 'flex'
+  } else {
+    const container = document.querySelector('.nav-menu');
+    container.style.display = 'none'
+  }
+}
